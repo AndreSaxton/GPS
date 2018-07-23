@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Geolocalização
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Utilize os campos abaixo para ir até as coordenadas especificadas</h3>
+  <label>Latitude (A atual é: {{latitudeAtual}})</label><br/>
+  <input [(ngModel)]="latitude" id="lat" type="number"><br/>
+  <label>Longitude (A atual é: {{longitudeAtual}})</label><br/>
+  <input [(ngModel)]="longitude" id="long" type="number"><br/>
+  <button ion-button (click)="criarGrafico()">Localizar</button>
+  <div id="map"></div>
+</ion-content>
